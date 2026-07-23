@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dgvon550hy008"]
+[gd_scene format=3 uid="uid://cxgplpm7pyd80"]
 
 [ext_resource type="Script" uid="uid://dyinscgdlbxf8" path="res://gun.gd" id="1_yf33g"]
 [ext_resource type="Texture2D" uid="uid://bfewuxim70vpt" path="res://Gun/gun.png" id="2_ux4uc"]
