@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c24njki1oh7dn" path="res://Assets/Sprites/Spy_Running.png" id="5_trn2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03owx"]
-size = Vector2(24.048103, 29.659328)
+size = Vector2(14.629251, 29.659328)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efikj"]
 atlas = ExtResource("3_3dxm6")
@@ -229,7 +229,7 @@ scale = Vector2(2.495, 2.495)
 script = ExtResource("1_uu6xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=935171940]
-position = Vector2(-0.4008026, -0.4008026)
+position = Vector2(-3.1062164, 0)
 shape = SubResource("RectangleShape2D_03owx")
 
 [node name="Gun" parent="CharacterBody2D" unique_id=1045383191 instance=ExtResource("3_cm0pq")]
