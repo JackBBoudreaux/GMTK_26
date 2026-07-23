@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dxdlcsphejg8y" path="res://Assets/Scripts/Player_movement.gd" id="1_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://db0vnf25654mb" path="res://Assets/Sprites/Guy.png" id="2_r0du0"]
-[ext_resource type="PackedScene" uid="uid://cxgplpm7pyd80" path="res://Gun/gun.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://cxgplpm7pyd80" path="res://gun.tscn" id="3_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://bccbkbyuhscfi" path="res://Assets/Sprites/cbf8d5ca3073edb023a0a7fdc5df9b7e.jpg" id="4_cm0pq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(31, 58)
@@ -25,3 +26,15 @@ texture = ExtResource("2_r0du0")
 [node name="Gun" parent="CharacterBody2D" unique_id=1045383191 instance=ExtResource("3_cm0pq")]
 position = Vector2(0, -4)
 scale = Vector2(1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=958447330]
+position_smoothing_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1576772780]
+z_index = -4096
+offset_left = -442.0
+offset_top = -207.0
+offset_right = 714.0
+offset_bottom = 1101.0
+texture = ExtResource("4_cm0pq")
+stretch_mode = 1
