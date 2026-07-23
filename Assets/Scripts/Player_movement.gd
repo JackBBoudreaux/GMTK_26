@@ -1,9 +1,19 @@
 extends CharacterBody2D
  
- 
+#player basic movement
 const MAX_SPEED: int = 250
 const ACCELERATION: int = 1400
 const FRICTION: int = 1000
+
+#player dodge
+const DODGE_SPEED: float = 400.0
+const DODGE_DURATION: float = 0.3
+
+var dodge_roll_dir: Vector2 = Vector2. ZERO
+var dodge_roll_timer: float = 0.0
+
+var can_take_damage: bool = true
+
  
 @onready var sprite: Sprite2D = $Sprite2D
  
