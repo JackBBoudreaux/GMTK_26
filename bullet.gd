@@ -1,5 +1,6 @@
 extends Node2D
- 
+
+
 const SPEED: int = 300
  
  #how the bullet shoots
