@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bbcgth18qt0sk"]
+
+[ext_resource type="Script" uid="uid://dxdlcsphejg8y" path="res://Assets/Scripts/Player_movement.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://db0vnf25654mb" path="res://Assets/Sprites/Guy.png" id="2_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://cxgplpm7pyd80" path="res://Gun/gun.tscn" id="3_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
+size = Vector2(31, 58)
+
+[node name="Node2D" type="Node2D" unique_id=1067209580]
+position = Vector2(442, 208)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=68703]
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1130997102]
+shape = SubResource("RectangleShape2D_e80uo")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=890195689]
+texture_filter = 1
+position = Vector2(2, 7)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("2_kpjcp")
+
+[node name="Gun" parent="CharacterBody2D" unique_id=1045383191 instance=ExtResource("3_kne1u")]
+position = Vector2(0, -4)
+scale = Vector2(1, 1)
