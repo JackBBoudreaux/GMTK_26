@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://loorlveisuus" path="res://Assets/Sprites/Spy_Death.png" id="3_tdg3f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
-size = Vector2(29.928848, 28.05611)
+size = Vector2(31, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efikj"]
 atlas = ExtResource("3_tdg3f")
@@ -176,7 +176,6 @@ scale = Vector2(2.495, 2.495)
 script = ExtResource("1_kpjcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1130997102]
-position = Vector2(-0.5355835, -0.4008026)
 shape = SubResource("RectangleShape2D_e80uo")
 
 [node name="Gun" parent="CharacterBody2D" unique_id=1045383191 instance=ExtResource("3_kne1u")]
@@ -188,10 +187,10 @@ position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1464647804]
 texture_filter = 1
-position = Vector2(-0.40080163, -0.40080163)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"idle"
+animation = &"running"
 autoplay = "idle"
+frame_progress = 0.79440826
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1134769077]
 z_index = -4096
