@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bf7sgd6njver5"]
 
-[ext_resource type="Script" uid="uid://dyinscgdlbxf8" path="res://gun.gd" id="1_yf33g"]
+[ext_resource type="Script" uid="uid://dyinscgdlbxf8" path="res://Gun/gun.gd" id="1_yf33g"]
 [ext_resource type="Texture2D" uid="uid://dpehl57bfc88j" path="res://Assets/Sprites/Spy_Arm1.png" id="2_dk5gl"]
 
 [node name="Gun" type="Node2D" unique_id=1045383191]
