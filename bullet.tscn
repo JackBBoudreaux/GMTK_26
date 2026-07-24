@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://5v1kba7s3uv2" path="res://bullet.gd" id="1_gof56"]
 [ext_resource type="Texture2D" uid="uid://dfonx2u0dski7" path="res://Assets/Sprites/bullet.png" id="2_5v6o7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm4b"]
-size = Vector2(8, 4)
-
 [node name="bullet" type="Node2D" unique_id=264125768]
 script = ExtResource("1_gof56")
 
@@ -17,11 +14,5 @@ offset = Vector2(1, 0)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=640688885]
 rect = Rect2(-64, -64, 128, 128)
-
-[node name="hurtbox" type="Area2D" parent="." unique_id=406648965]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=98541255]
-position = Vector2(2, 0)
-shape = SubResource("RectangleShape2D_0xm4b")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
