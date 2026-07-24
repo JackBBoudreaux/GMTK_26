@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dxdlcsphejg8y" path="res://Assets/Scripts/Player_movement.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bpb6exw8hr0ny" path="res://Assets/Sprites/Spy_Idle.png" id="3_cxr5p"]
 [ext_resource type="Texture2D" uid="uid://c24njki1oh7dn" path="res://Assets/Sprites/Spy_Running.png" id="3_e80uo"]
-[ext_resource type="PackedScene" uid="uid://bf7sgd6njver5" path="res://gun.tscn" id="3_kne1u"]
+[ext_resource type="PackedScene" uid="uid://bf7sgd6njver5" path="res://Gun/gun.tscn" id="3_kne1u"]
 [ext_resource type="Texture2D" uid="uid://loorlveisuus" path="res://Assets/Sprites/Spy_Death.png" id="3_tdg3f"]
 [ext_resource type="Script" uid="uid://dysmochkltkpe" path="res://health.gd" id="6_dtqjt"]
 [ext_resource type="Script" uid="uid://dsbl7ayir7pa" path="res://hitbox.gd" id="7_5ncpa"]

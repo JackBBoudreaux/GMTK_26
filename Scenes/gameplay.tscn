@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://werrnt2hioxu"]
 
 [ext_resource type="Script" uid="uid://dxdlcsphejg8y" path="res://Assets/Scripts/Player_movement.gd" id="1_fbudy"]
-[ext_resource type="PackedScene" uid="uid://bf7sgd6njver5" path="res://gun.tscn" id="2_0m7cd"]
+[ext_resource type="PackedScene" uid="uid://bf7sgd6njver5" path="res://Gun/gun.tscn" id="2_0m7cd"]
 [ext_resource type="Texture2D" uid="uid://loorlveisuus" path="res://Assets/Sprites/Spy_Death.png" id="3_2ihbs"]
 [ext_resource type="Texture2D" uid="uid://bpb6exw8hr0ny" path="res://Assets/Sprites/Spy_Idle.png" id="4_1qy1k"]
 [ext_resource type="Texture2D" uid="uid://c24njki1oh7dn" path="res://Assets/Sprites/Spy_Running.png" id="5_3n40r"]
