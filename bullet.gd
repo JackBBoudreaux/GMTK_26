@@ -1,6 +1,7 @@
 extends Node2D
 
-const SPEED: int = 300
+
+const SPEED: int = 1000
  
  #how the bullet shoots
 func _process(delta: float) -> void:
