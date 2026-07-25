@@ -259,7 +259,8 @@ metadata/_custom_type_script = "uid://dysmochkltkpe"
 
 [node name="HurtBox" type="Area2D" parent="Enemy" unique_id=1842359018 node_paths=PackedStringArray("health")]
 scale = Vector2(0.99999994, 0.99999994)
-collision_layer = 0
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("3_qi2p4")
 health = NodePath("../Health")
 metadata/_custom_type_script = "uid://4spiax2bj7n5"
@@ -278,13 +279,12 @@ collision_mask = 3
 position = Vector2(5.9604645e-08, -2.9802322e-08)
 shape = SubResource("CircleShape2D_ohs4u")
 
-[node name="HitBox" type="Area2D" parent="." unique_id=1694146075]
-collision_layer = 2
-collision_mask = 2
+[node name="HitBox" type="Area2D" parent="Enemy" unique_id=1694146075]
+scale = Vector2(0.28571427, 0.28571427)
 script = ExtResource("7_glvfu")
 metadata/_custom_type_script = "uid://dsbl7ayir7pa"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=877075033]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/HitBox" unique_id=877075033]
 shape = SubResource("CircleShape2D_0xm4b")
 
 [connection signal="health_depleted" from="Enemy/Health" to="Enemy" method="_on_health_health_depleted"]

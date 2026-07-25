@@ -19,7 +19,8 @@ var animation_offsets := {
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var attack_area: Area2D = $AttackArea
-@onready var hit_box: HitBox = $"../HitBox"
+@onready var hit_box: HitBox = $HitBox
+
 
 
 func _ready() -> void:
@@ -109,10 +110,8 @@ func _on_health_health_depleted() -> void:
 	velocity = Vector2.ZERO
 	hit_box.monitoring = false
 	attack_area.monitoring = false  # stop it from re-triggering attacks while dying
-
 	animated_sprite_2d.play("enemy_death")
 	animated_sprite_2d.animation_finished.connect(_on_death_animation_finished)
-
 func _on_death_animation_finished() -> void:
 	if animated_sprite_2d.animation == "enemy_death":
 		queue_free()

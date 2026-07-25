@@ -10,24 +10,23 @@ size = Vector2(10, 6)
 [node name="bullet" type="Node2D" unique_id=264125768]
 script = ExtResource("1_gof56")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=652216331]
+[node name="HitBox" type="Area2D" parent="." unique_id=652216331]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_t4vbm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1279041869]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=237146259]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_0xm4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="HitBox" unique_id=1279041869]
 texture_filter = 1
 scale = Vector2(3.75, 3.75)
 texture = ExtResource("2_5v6o7")
 offset = Vector2(1, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=956128065]
-position = Vector2(2, 0)
-shape = SubResource("RectangleShape2D_0xm4b")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Area2D" unique_id=640688885]
-visible = false
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="HitBox" unique_id=640688885]
 rect = Rect2(-64, -64, 128, 128)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="screen_exited" from="Area2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="screen_exited" from="HitBox/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
