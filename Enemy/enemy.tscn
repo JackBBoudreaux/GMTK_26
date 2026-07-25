@@ -161,7 +161,7 @@ animations = [{
 "speed": 25.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.7,
 "texture": SubResource("AtlasTexture_glvfu")
 }, {
 "duration": 1.0,
@@ -190,7 +190,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"enemy_death",
-"speed": 8.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -243,8 +243,10 @@ script = ExtResource("1_iifgy")
 texture_filter = 1
 scale = Vector2(0.69642854, 0.69642854)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"enemy_attacking"
+animation = &"enemy_death"
 autoplay = "enemy_running"
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=147644081]
 scale = Vector2(0.9999999, 0.9999999)
