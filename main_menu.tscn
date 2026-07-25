@@ -2,8 +2,14 @@
 
 [ext_resource type="FontFile" uid="uid://bnbb1jkhsf7u5" path="res://Main_Menu/pixelplay.ttf" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://bqsawhflvyecj" path="res://Main_Menu/Script/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://n5hxehddfhe0" path="res://Main_Menu/JamesBombMenu.png" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://qo66eonf1x2" path="res://Main_Menu/JamesBombTitle.png" id="3_jix8l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fy2e8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("2_fu7sn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
+texture = ExtResource("3_jix8l")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgmil"]
 bg_color = Color(0, 0, 0, 1)
@@ -55,7 +61,20 @@ offset_left = 1.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_fy2e8")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="Panel2" type="Panel" parent="Panel" unique_id=284161493]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 500.0
+offset_top = -119.0
+offset_right = 267.44446
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fu7sn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=343250920]
 layout_mode = 1
@@ -64,10 +83,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -311.25
-offset_top = -91.0
-offset_right = 311.25
-offset_bottom = -22.0
+offset_left = -56.0
+offset_top = -82.0
+offset_right = 566.5
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 30
