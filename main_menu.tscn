@@ -25,10 +25,6 @@ anti_aliasing_size = 4.42
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
 bg_color = Color(0.7953939, 0.79539394, 0.7953939, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
 border_color = Color(0, 0, 0, 1)
 corner_detail = 1
 shadow_offset = Vector2(0.715, 0)
@@ -37,11 +33,15 @@ anti_aliasing_size = 4.42
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
 bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5h30v"]
+bg_color = Color(0, 0, 0, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
 
 [node name="MainMenu" type="Control" unique_id=1530571761]
 layout_mode = 3
@@ -76,23 +76,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_fu7sn")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=343250920]
+[node name="Main Buttons" type="HBoxContainer" parent="." unique_id=343250920]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -56.0
+offset_left = -118.0
 offset_top = -82.0
 offset_right = 566.5
 offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 30
+theme_override_constants/separation = 13
 alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=646392401]
+[node name="Start" type="Button" parent="Main Buttons" unique_id=646392401]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -106,7 +106,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
 text = "START"
 
-[node name="Button2" type="Button" parent="HBoxContainer" unique_id=629213449]
+[node name="Options" type="Button" parent="Main Buttons" unique_id=629213449]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -120,7 +120,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
 text = "OPTIONS"
 
-[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1184893856]
+[node name="Credits" type="Button" parent="Main Buttons" unique_id=196508167]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "CREDITS"
+
+[node name="Exit" type="Button" parent="Main Buttons" unique_id=1184893856]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -134,6 +148,106 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
 text = "EXIT"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_START_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_SETTINGS_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_EXIT_pressed"]
+[node name="Credits" type="Panel" parent="." unique_id=1842666013]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -273.5
+offset_right = 304.0
+offset_bottom = 273.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5h30v")
+
+[node name="Label" type="Label" parent="Credits" unique_id=201915244]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.5
+offset_top = -270.0
+offset_right = 209.5
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 55
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="Exit" type="Button" parent="Credits/Label" unique_id=1397474563]
+layout_mode = 0
+offset_left = 458.5
+offset_top = 8.0
+offset_right = 501.5
+offset_bottom = 48.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "X"
+
+[node name="Label3" type="Label" parent="Credits" unique_id=118602057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.5
+offset_top = 197.0
+offset_right = 209.5
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 49
+text = "Made for GMTK 2026"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Credits" unique_id=255969723]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.5
+offset_top = -185.0
+offset_right = 273.5
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 30
+text = "Bryan Lorenzo - Game Design, Tile Mapping
+
+Jack - Programming
+
+Desiree - Prop Art
+
+Nick - Game Design, Tile Art, Programming
+
+Hannah - Sound design and music
+
+Vick \"Vigilante\" Scarpato - Character animation, Menu Art, UI"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Main Buttons/Start" to="." method="_on_START_pressed"]
+[connection signal="pressed" from="Main Buttons/Options" to="." method="_on_SETTINGS_pressed"]
+[connection signal="pressed" from="Main Buttons/Credits" to="." method="_on_CREDITS_pressed"]
+[connection signal="pressed" from="Main Buttons/Exit" to="." method="_on_EXIT_pressed"]
+[connection signal="pressed" from="Credits/Label/Exit" to="." method="_on_X_pressed"]
