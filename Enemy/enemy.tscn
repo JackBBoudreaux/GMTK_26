@@ -3,11 +3,56 @@
 [ext_resource type="Script" uid="uid://pdbo88fq5xkl" path="res://enemy.gd" id="1_iifgy"]
 [ext_resource type="Script" uid="uid://dysmochkltkpe" path="res://health.gd" id="2_4gyqm"]
 [ext_resource type="Script" uid="uid://4spiax2bj7n5" path="res://hurtbox.gd" id="3_qi2p4"]
+[ext_resource type="Texture2D" uid="uid://dwj2ww6r211oy" path="res://Assets/Sprites/Enemy_Attacking.png" id="4_m6jha"]
 [ext_resource type="Texture2D" uid="uid://cjae1x7vdahw1" path="res://Assets/Sprites/Enemy_Death.png" id="4_ncf7h"]
 [ext_resource type="Texture2D" uid="uid://coxxcq7bj4gf0" path="res://Assets/Sprites/Enemy_Running.png" id="5_m6jha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm4b"]
 size = Vector2(12.5, 19.428572)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tjkx"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(0, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8qep"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(36, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1l6t"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(72, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5rk4"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(108, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q40vv"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(144, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psesu"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(180, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgogq"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(216, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j8qn"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(252, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agwpm"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(288, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwa2w"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(324, 0, 36, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2ets"]
+atlas = ExtResource("4_m6jha")
+region = Rect2(360, 0, 36, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_glvfu"]
 atlas = ExtResource("4_ncf7h")
@@ -81,6 +126,44 @@ region = Rect2(210, 0, 30, 28)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4tjkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8qep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1l6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5rk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q40vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psesu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgogq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2j8qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agwpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwa2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2ets")
+}],
+"loop": 1,
+"name": &"enemy_attacking",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_glvfu")
 }, {
 "duration": 1.0,
@@ -143,7 +226,7 @@ animations = [{
 
 [node name="Enemy" type="Node2D" unique_id=1389768543]
 
-[node name="Enemy" type="CharacterBody2D" parent="." unique_id=200501244]
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=200501244 groups=["enemy"]]
 scale = Vector2(3.5, 3.5)
 script = ExtResource("1_iifgy")
 
@@ -171,7 +254,9 @@ texture_filter = 1
 position = Vector2(-5.428571, -4)
 scale = Vector2(0.69642854, 0.69642854)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"enemy_death"
+animation = &"enemy_attacking"
 autoplay = "enemy_running"
+frame = 6
+frame_progress = 0.6093808
 
 [connection signal="health_depleted" from="Enemy/Health" to="Enemy" method="_on_health_health_depleted"]

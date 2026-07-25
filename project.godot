@@ -24,6 +24,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="James Bomb"
 
+[global_group]
+
+enemy=""
+
 [input]
 
 up={
