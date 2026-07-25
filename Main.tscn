@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dxdlcsphejg8y" path="res://Assets/Scripts/Player_movement.gd" id="1_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://loorlveisuus" path="res://Assets/Sprites/Spy_Death.png" id="3_3dxm6"]
-[ext_resource type="PackedScene" uid="uid://cxgplpm7pyd80" path="res://gun.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://bf7sgd6njver5" path="res://gun.tscn" id="3_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://d0yffd3jri7cb" path="res://Placeholder_Tiles/Placeholder_wall.png" id="4_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://bpb6exw8hr0ny" path="res://Assets/Sprites/Spy_Idle.png" id="4_lgr22"]
 [ext_resource type="Texture2D" uid="uid://c24njki1oh7dn" path="res://Assets/Sprites/Spy_Running.png" id="5_trn2v"]
+[ext_resource type="Script" uid="uid://dysmochkltkpe" path="res://health.gd" id="6_lgr22"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_03owx"]
-size = Vector2(14.629251, 29.659328)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trn2v"]
+size = Vector2(15.230501, 28.05611)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efikj"]
 atlas = ExtResource("3_3dxm6")
@@ -90,7 +91,7 @@ region = Rect2(180, 0, 30, 28)
 atlas = ExtResource("5_trn2v")
 region = Rect2(210, 0, 30, 28)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_wkp8b"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_03owx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -165,7 +166,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"running",
-"speed": 8.0
+"speed": 14.0
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fos0i"]
@@ -339,28 +340,32 @@ sources/0 = SubResource("TileSetAtlasSource_fos0i")
 [node name="Node2D" type="Node2D" unique_id=1221129304]
 position = Vector2(561, 311)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1951921018]
-top_level = true
-position = Vector2(-77.000015, 97)
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1786678209]
+position = Vector2(-638, -215)
 scale = Vector2(2.495, 2.495)
 script = ExtResource("1_uu6xs")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=935171940]
-position = Vector2(-3.1062164, 0)
-shape = SubResource("RectangleShape2D_03owx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1791834484]
+position = Vector2(-3.2064514, -0.4008026)
+shape = SubResource("RectangleShape2D_trn2v")
 
-[node name="Gun" parent="CharacterBody2D" unique_id=1045383191 instance=ExtResource("3_cm0pq")]
+[node name="Gun" parent="Player" unique_id=1045383191 instance=ExtResource("3_cm0pq")]
 position = Vector2(0, -4)
 scale = Vector2(1, 1)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1829884]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1482276891]
 position_smoothing_enabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1911937713]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1534025626]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_wkp8b")
+position = Vector2(-0.40080163, -0.40080163)
+sprite_frames = SubResource("SpriteFrames_03owx")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="Health" type="Node" parent="Player" unique_id=1206999261]
+script = ExtResource("6_lgr22")
+metadata/_custom_type_script = "uid://dysmochkltkpe"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1576772780]
 visible = false
