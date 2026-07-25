@@ -233,15 +233,15 @@ grow_vertical = 2
 theme_override_constants/line_spacing = -10
 theme_override_fonts/font = ExtResource("1_06t4h")
 theme_override_font_sizes/font_size = 30
-text = "Bryan Lorenzo - Game Design, Tile Mapping
+text = "Nick Rosen - Lead Game Design, Tile Art, Programming
 
-Jack - Programming
+Jack Boudreaux - Programming
 
-Desiree - Prop Art
+Bryan Lorenzo - Level Design
 
-Nick - Game Design, Tile Art, Programming
+Desiree Lopez - Prop Art
 
-Hannah - Sound design and music
+Hannah Cherone - Sound designer
 
 Vick \"Vigilante\" Scarpato - Character animation, Menu Art, UI"
 autowrap_mode = 3
