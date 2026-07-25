@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="James Bomb"
-run/main_scene="uid://dc7t81a5bh1sl"
+run/main_scene="uid://werrnt2hioxu"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
