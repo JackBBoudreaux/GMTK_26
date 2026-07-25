@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dxdlcsphejg8y" path="res://Assets/Scripts/Player_movement.gd" id="1_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://loorlveisuus" path="res://Assets/Sprites/Spy_Death.png" id="3_3dxm6"]
-[ext_resource type="PackedScene" uid="uid://bf7sgd6njver5" path="res://Gun/gun.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://cxgplpm7pyd80" path="res://gun.tscn" id="3_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://d0yffd3jri7cb" path="res://Placeholder_Tiles/Placeholder_wall.png" id="4_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://bpb6exw8hr0ny" path="res://Assets/Sprites/Spy_Idle.png" id="4_lgr22"]
 [ext_resource type="Texture2D" uid="uid://c24njki1oh7dn" path="res://Assets/Sprites/Spy_Running.png" id="5_trn2v"]
-[ext_resource type="Texture2D" uid="uid://yi4ift5e7rrt" path="res://Tiles/Cobblestone_Tile.png" id="7_trn2v"]
-[ext_resource type="Texture2D" uid="uid://dgmmeh6pyx2pt" path="res://Placeholder_Tiles/PlaceHolderObjects.png" id="8_03owx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03owx"]
 size = Vector2(14.629251, 29.659328)
@@ -169,125 +167,6 @@ animations = [{
 "name": &"running",
 "speed": 8.0
 }]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fos0i"]
-texture = ExtResource("4_cm0pq")
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/0/terrains_peering_bit/right_side = 0
-0:0/0/terrains_peering_bit/bottom_right_corner = 0
-0:0/0/terrains_peering_bit/bottom_side = 0
-0:0/0/terrains_peering_bit/bottom_left_corner = 0
-0:0/0/terrains_peering_bit/left_side = 0
-0:0/0/terrains_peering_bit/top_left_corner = 0
-0:0/0/terrains_peering_bit/top_side = 0
-0:0/0/terrains_peering_bit/top_right_corner = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkp8b"]
-texture = ExtResource("7_trn2v")
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 1
-0:0/0/terrains_peering_bit/right_side = 1
-0:0/0/terrains_peering_bit/bottom_right_corner = 1
-0:0/0/terrains_peering_bit/bottom_side = 1
-0:0/0/terrains_peering_bit/bottom_left_corner = 1
-0:0/0/terrains_peering_bit/left_side = 1
-0:0/0/terrains_peering_bit/top_left_corner = 1
-0:0/0/terrains_peering_bit/top_side = 1
-0:0/0/terrains_peering_bit/top_right_corner = 1
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_20pc6"]
-texture = ExtResource("8_03owx")
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 2
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/0/terrains_peering_bit/right_side = 2
-0:0/0/terrains_peering_bit/bottom_right_corner = 2
-0:0/0/terrains_peering_bit/bottom_side = 2
-0:0/0/terrains_peering_bit/bottom_left_corner = 2
-0:0/0/terrains_peering_bit/left_side = 2
-0:0/0/terrains_peering_bit/top_left_corner = 2
-0:0/0/terrains_peering_bit/top_side = 2
-0:0/0/terrains_peering_bit/top_right_corner = 2
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_ogq8d"]
-physics_layer_0/collision_layer = 1
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Placeholder_Wall"
-terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-terrain_set_0/terrain_1/name = "CobbleFloor"
-terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-terrain_set_0/terrain_2/name = "PlaceholderObjects"
-terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_fos0i")
-sources/1 = SubResource("TileSetAtlasSource_wkp8b")
-sources/2 = SubResource("TileSetAtlasSource_20pc6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fos0i"]
 texture = ExtResource("4_cm0pq")
