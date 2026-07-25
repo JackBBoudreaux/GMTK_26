@@ -172,7 +172,7 @@ animations = [{
 [node name="Gameplay" type="Node2D" unique_id=1974249953]
 position = Vector2(-1, 0)
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=594027720]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=594027720 groups=["player"]]
 position = Vector2(576, 325)
 scale = Vector2(2.495, 2.495)
 script = ExtResource("1_fbudy")

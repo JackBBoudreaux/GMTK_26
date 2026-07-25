@@ -6,9 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dwj2ww6r211oy" path="res://Assets/Sprites/Enemy_Attacking.png" id="4_m6jha"]
 [ext_resource type="Texture2D" uid="uid://cjae1x7vdahw1" path="res://Assets/Sprites/Enemy_Death.png" id="4_ncf7h"]
 [ext_resource type="Texture2D" uid="uid://coxxcq7bj4gf0" path="res://Assets/Sprites/Enemy_Running.png" id="5_m6jha"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm4b"]
-size = Vector2(12.5, 19.428572)
+[ext_resource type="Script" uid="uid://dsbl7ayir7pa" path="res://hitbox.gd" id="7_glvfu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4tjkx"]
 atlas = ExtResource("4_m6jha")
@@ -158,9 +156,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r2ets")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"enemy_attacking",
-"speed": 12.0
+"speed": 25.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -190,7 +188,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1w3kn")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"enemy_death",
 "speed": 8.0
 }, {
@@ -221,25 +219,44 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_running",
-"speed": 5.0
+"speed": 12.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm4b"]
+size = Vector2(12.5, 19.428572)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohs4u"]
+radius = 11.999999
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm4b"]
+radius = 52.03845
 
 [node name="Enemy" type="Node2D" unique_id=1389768543]
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=200501244 groups=["enemy"]]
 scale = Vector2(3.5, 3.5)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_iifgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=926311367]
+texture_filter = 1
+scale = Vector2(0.69642854, 0.69642854)
+sprite_frames = SubResource("SpriteFrames_0xm4b")
+animation = &"enemy_attacking"
+autoplay = "enemy_running"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=147644081]
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_0xm4b")
 
 [node name="Health" type="Node" parent="Enemy" unique_id=2089748422]
 script = ExtResource("2_4gyqm")
 max_health = 1
 metadata/_custom_type_script = "uid://dysmochkltkpe"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=147644081]
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_0xm4b")
-
 [node name="HurtBox" type="Area2D" parent="Enemy" unique_id=1842359018 node_paths=PackedStringArray("health")]
+scale = Vector2(0.99999994, 0.99999994)
 collision_layer = 0
 script = ExtResource("3_qi2p4")
 health = NodePath("../Health")
@@ -249,14 +266,23 @@ metadata/_custom_type_script = "uid://4spiax2bj7n5"
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_0xm4b")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=926311367]
-texture_filter = 1
-position = Vector2(-5.428571, -4)
-scale = Vector2(0.69642854, 0.69642854)
-sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"enemy_attacking"
-autoplay = "enemy_running"
-frame = 6
-frame_progress = 0.6093808
+[node name="AttackTimer" type="Timer" parent="Enemy" unique_id=986013226]
+
+[node name="AttackArea" type="Area2D" parent="Enemy" unique_id=1625413650]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/AttackArea" unique_id=461044384]
+position = Vector2(5.9604645e-08, -2.9802322e-08)
+shape = SubResource("CircleShape2D_ohs4u")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1694146075]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_glvfu")
+metadata/_custom_type_script = "uid://dsbl7ayir7pa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=877075033]
+shape = SubResource("CircleShape2D_0xm4b")
 
 [connection signal="health_depleted" from="Enemy/Health" to="Enemy" method="_on_health_health_depleted"]
