@@ -29,7 +29,7 @@ func _ready() -> void:
 	attack_area.body_exited.connect(_on_attack_area_body_exited)
 	hit_box_shape.disabled = true  # off by default, only enabled during the attack swing
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if player == null:
 		return
 	player_pos = player.global_position
@@ -92,8 +92,8 @@ func _on_health_health_depleted() -> void:
 		is_attacking = false
 	set_physics_process(false)
 	velocity = Vector2.ZERO
-	hit_box_shape.disabled = true
-	attack_area.monitoring = false
+	hit_box_shape.set_deferred("disabled", true)
+	attack_area.set_deferred("monitoring", false)
 	animated_sprite_2d.play("enemy_death")
 	animated_sprite_2d.animation_finished.connect(_on_death_animation_finished)
 

@@ -91,7 +91,7 @@ region = Rect2(210, 0, 30, 28)
 [sub_resource type="SpriteFrames" id="SpriteFrames_dtqjt"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_efikj")
 }, {
 "duration": 1.0,
@@ -117,7 +117,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"dying",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -173,7 +173,7 @@ size = Vector2(15.631283, 25.250504)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=844537046 groups=["player"]]
 scale = Vector2(2.495, 2.495)
-collision_mask = 3
+collision_mask = 6
 script = ExtResource("1_kpjcp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1549898210]
@@ -184,7 +184,7 @@ animation = &"dying"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=608618960]
-position = Vector2(3.0060225, 1.0020038)
+position = Vector2(1.2024049, 0.40080166)
 shape = SubResource("RectangleShape2D_tdg3f")
 
 [node name="Gun" parent="Player" unique_id=1045383191 instance=ExtResource("3_kne1u")]
@@ -201,13 +201,13 @@ max_health = 1
 metadata/_custom_type_script = "uid://dysmochkltkpe"
 
 [node name="HurtBox" type="Area2D" parent="Player" unique_id=1832348105 node_paths=PackedStringArray("health")]
+collision_mask = 16
 script = ExtResource("7_dtqjt")
 health = NodePath("../Health")
 metadata/_custom_type_script = "uid://4spiax2bj7n5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/HurtBox" unique_id=424339325]
-visible = false
-position = Vector2(3.206413, 2.0040073)
+position = Vector2(1.2024049, 0.4008016)
 shape = SubResource("RectangleShape2D_tdg3f")
 
 [connection signal="health_depleted" from="Player/Health" to="Player" method="_on_health_health_depleted"]

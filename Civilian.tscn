@@ -127,16 +127,18 @@ size = Vector2(28.17, 48.055)
 position = Vector2(527, 312)
 
 [node name="Civilian" type="CharacterBody2D" parent="." unique_id=1311957122]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 0
+collision_mask = 4
 script = ExtResource("1_j5g1q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Civilian" unique_id=1240758352]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"civilian_running"
+animation = &"civilian_death"
 autoplay = "civilian_running"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Civilian" unique_id=353614831]
 shape = SubResource("RectangleShape2D_0xm4b")
@@ -149,8 +151,8 @@ max_health = 1
 metadata/_custom_type_script = "uid://dysmochkltkpe"
 
 [node name="HurtBox" type="Area2D" parent="Civilian" unique_id=1570820532 node_paths=PackedStringArray("health")]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 4
+collision_mask = 8
 script = ExtResource("5_f477j")
 health = NodePath("../Health")
 metadata/_custom_type_script = "uid://4spiax2bj7n5"

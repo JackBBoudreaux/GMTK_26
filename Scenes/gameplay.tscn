@@ -17,4 +17,4 @@ position = Vector2(805, 317)
 position = Vector2(776, 511)
 
 [node name="Civilian" parent="." unique_id=633203971 instance=ExtResource("3_m34ki")]
-position = Vector2(517, 232)
+position = Vector2(522, 232)
