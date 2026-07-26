@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpehl57bfc88j"
-path="res://.godot/imported/Spy_Arm1.png-246aacc3fc7f0ab78538c92b81cf2228.ctex"
+uid="uid://coxxcq7bj4gf0"
+path="res://.godot/imported/Enemy_Running.png-23e46c348f6b5d6121f18f88058ea459.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Spy_Arm1.png"
-dest_files=["res://.godot/imported/Spy_Arm1.png-246aacc3fc7f0ab78538c92b81cf2228.ctex"]
+source_file="res://Assets/Sprites/Enemy_Running.png"
+dest_files=["res://.godot/imported/Enemy_Running.png-23e46c348f6b5d6121f18f88058ea459.ctex"]
 
 [params]
 
