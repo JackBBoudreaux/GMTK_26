@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://dpcp8l5jw442d"]
 
 [ext_resource type="FontFile" uid="uid://bnbb1jkhsf7u5" path="res://Main_Menu/pixelplay.ttf" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://bqsawhflvyecj" path="res://Main_Menu/Script/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://bqsawhflvyecj" path="res://Assets/Scripts/main_menu.gd" id="1_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://n5hxehddfhe0" path="res://Main_Menu/JamesBombMenu.png" id="2_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://qo66eonf1x2" path="res://Main_Menu/JamesBombTitle.png" id="3_jix8l"]
 [ext_resource type="AudioStream" uid="uid://c1q0e6ptym6o7" path="res://SFX/Start button.wav" id="5_glbon"]
 [ext_resource type="AudioStream" uid="uid://b72afk3x1h8kr" path="res://SFX/Credit screen .wav" id="6_nlkkf"]
 [ext_resource type="AudioStream" uid="uid://s344igc0mgta" path="res://SFX/Click.wav" id="7_qe12f"]
 [ext_resource type="AudioStream" uid="uid://bl5nm7gmpmwpt" path="res://SFX/Hover button.wav" id="8_8qtwp"]
+[ext_resource type="AudioStream" uid="uid://cts8g633w0q2c" path="res://SFX/noir menu.mp3" id="9_dy7ct"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
 texture = ExtResource("2_fu7sn")
@@ -263,6 +264,9 @@ stream = ExtResource("7_qe12f")
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1397446453]
 stream = ExtResource("8_8qtwp")
+
+[node name="NoirSong" type="AudioStreamPlayer" parent="." unique_id=1727629945]
+stream = ExtResource("9_dy7ct")
 
 [connection signal="mouse_entered" from="Main Buttons/Start" to="." method="_on_START_mouse_entered"]
 [connection signal="pressed" from="Main Buttons/Start" to="." method="_on_START_pressed"]

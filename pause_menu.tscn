@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b81aedcwyq3bk"]
 
-[ext_resource type="Script" uid="uid://dodijeo0msj5g" path="res://Pause_Menu/pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="Script" uid="uid://dodijeo0msj5g" path="res://Assets/Scripts/pause_menu.gd" id="1_nwcfo"]
 [ext_resource type="FontFile" uid="uid://bnbb1jkhsf7u5" path="res://Main_Menu/pixelplay.ttf" id="2_05uyy"]
 [ext_resource type="AudioStream" uid="uid://s344igc0mgta" path="res://SFX/Click.wav" id="3_p81d2"]
 [ext_resource type="AudioStream" uid="uid://bl5nm7gmpmwpt" path="res://SFX/Hover button.wav" id="4_2nc7s"]
+[ext_resource type="AudioStream" uid="uid://b72afk3x1h8kr" path="res://SFX/Credit screen .wav" id="5_2nc7s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p81d2"]
 bg_color = Color(0, 0, 0, 1)
@@ -113,6 +114,9 @@ stream = ExtResource("3_p81d2")
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1631768010]
 stream = ExtResource("4_2nc7s")
+
+[node name="CreditSound" type="AudioStreamPlayer" parent="." unique_id=337070650]
+stream = ExtResource("5_2nc7s")
 
 [connection signal="mouse_entered" from="VBoxContainer/Resume" to="." method="_on_resume_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_RESUME_pressed"]

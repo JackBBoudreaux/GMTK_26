@@ -18,6 +18,8 @@ func _on_animation_finished(anim_name):
 	elif anim_name == "fade_to_NORMAL":
 		color_rect.visible = false
 		controls.visible = true
+		await get_tree().create_timer(2).timeout
+		$Dr_No.play()
 
 func transition():
 	$StartButtonSound.play()

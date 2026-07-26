@@ -10,18 +10,21 @@ func _input(event: InputEvent) -> void:
 			visible = false
 			get_tree().paused = false
 		else:
+			$CreditSound.play()
 			visible = true
 			get_tree().paused = true
 		
 func _on_RESUME_pressed() -> void:
 	$ClickSound.play()
+	$CreditSound.stop()
 	visible = false
 	get_tree().paused = false
 
 func _on_button_2_pressed() -> void:
-	
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	$CreditSound.stop()
 	$ClickSound.play()
+	get_tree().change_scene_to_file("res://main_menu.tscn")
+	
 
 func _on_resume_mouse_entered() -> void:
 	$HoverSound.play()
