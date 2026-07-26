@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cts8g633w0q2c"
+path="res://.godot/imported/noir menu.mp3-cab2b26b808cb92a24a6dc2a9b8ef2a8.mp3str"
+
+[deps]
+
+source_file="res://SFX/noir menu.mp3"
+dest_files=["res://.godot/imported/noir menu.mp3-cab2b26b808cb92a24a6dc2a9b8ef2a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
