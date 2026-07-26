@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bxm4jsfhmq5ll"]
+
+[ext_resource type="Script" uid="uid://hm8surx3xqfl" path="res://civilian.gd" id="1_j5g1q"]
+[ext_resource type="SpriteFrames" uid="uid://dp2qq3jk53xgb" path="res://civilian_frames_1.tres" id="2_mjykl"]
+[ext_resource type="Script" uid="uid://dysmochkltkpe" path="res://health.gd" id="4_u5joi"]
+[ext_resource type="Script" uid="uid://4spiax2bj7n5" path="res://hurtbox.gd" id="5_f477j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm4b"]
+size = Vector2(28.315, 47.97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohs4u"]
+size = Vector2(28.17, 48.055)
+
+[node name="Node2D" type="Node2D" unique_id=633203971]
+position = Vector2(527, 312)
+
+[node name="Civilian" type="CharacterBody2D" parent="." unique_id=1311957122]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_j5g1q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Civilian" unique_id=1240758352]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_mjykl")
+animation = &"civilian_running"
+autoplay = "civilian_running"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Civilian" unique_id=353614831]
+shape = SubResource("RectangleShape2D_0xm4b")
+
+[node name="WanderTimer" type="Timer" parent="Civilian" unique_id=1874733057]
+
+[node name="Health" type="Node" parent="Civilian" unique_id=762020609]
+script = ExtResource("4_u5joi")
+max_health = 1
+metadata/_custom_type_script = "uid://dysmochkltkpe"
+
+[node name="HurtBox" type="Area2D" parent="Civilian" unique_id=1570820532 node_paths=PackedStringArray("health")]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("5_f477j")
+health = NodePath("../Health")
+metadata/_custom_type_script = "uid://4spiax2bj7n5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Civilian/HurtBox" unique_id=1795288453]
+shape = SubResource("RectangleShape2D_ohs4u")
+
+[connection signal="health_depleted" from="Civilian/Health" to="Civilian" method="_on_health_health_depleted"]

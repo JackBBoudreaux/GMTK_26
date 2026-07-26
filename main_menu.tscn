@@ -1,0 +1,275 @@
+[gd_scene format=3 uid="uid://dpcp8l5jw442d"]
+
+[ext_resource type="FontFile" uid="uid://bnbb1jkhsf7u5" path="res://Main_Menu/pixelplay.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://bqsawhflvyecj" path="res://Main_Menu/Script/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://n5hxehddfhe0" path="res://Main_Menu/JamesBombMenu.png" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://qo66eonf1x2" path="res://Main_Menu/JamesBombTitle.png" id="3_jix8l"]
+[ext_resource type="AudioStream" uid="uid://c1q0e6ptym6o7" path="res://SFX/Start button.wav" id="5_glbon"]
+[ext_resource type="AudioStream" uid="uid://b72afk3x1h8kr" path="res://SFX/Credit screen .wav" id="6_nlkkf"]
+[ext_resource type="AudioStream" uid="uid://s344igc0mgta" path="res://SFX/Click.wav" id="7_qe12f"]
+[ext_resource type="AudioStream" uid="uid://bl5nm7gmpmwpt" path="res://SFX/Hover button.wav" id="8_8qtwp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("2_fu7sn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
+texture = ExtResource("3_jix8l")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgmil"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_detail = 1
+shadow_offset = Vector2(0.715, 0)
+anti_aliasing = false
+anti_aliasing_size = 4.42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0.7953939, 0.79539394, 0.7953939, 1)
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+shadow_offset = Vector2(0.715, 0)
+anti_aliasing = false
+anti_aliasing_size = 4.42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5h30v"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[node name="MainMenu" type="Control" unique_id=1530571761]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="Panel" type="Panel" parent="." unique_id=1699839725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="Panel2" type="Panel" parent="Panel" unique_id=284161493]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 500.0
+offset_top = -119.0
+offset_right = 267.44446
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fu7sn")
+
+[node name="Main Buttons" type="HBoxContainer" parent="." unique_id=343250920]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -82.0
+offset_right = 566.5
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="Start" type="Button" parent="Main Buttons" unique_id=646392401]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "START"
+
+[node name="Options" type="Button" parent="Main Buttons" unique_id=629213449]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "OPTIONS"
+
+[node name="Credits" type="Button" parent="Main Buttons" unique_id=196508167]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "CREDITS"
+
+[node name="Exit" type="Button" parent="Main Buttons" unique_id=1184893856]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "EXIT"
+
+[node name="Credits" type="Panel" parent="." unique_id=1842666013]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -303.25
+offset_right = 304.0
+offset_bottom = 303.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5h30v")
+
+[node name="Label" type="Label" parent="Credits" unique_id=201915244]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.5
+offset_top = -300.0
+offset_right = 209.5
+offset_bottom = -227.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 55
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="Exit" type="Button" parent="Credits/Label" unique_id=1397474563]
+layout_mode = 0
+offset_left = 458.5
+offset_top = 8.0
+offset_right = 501.5
+offset_bottom = 48.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lgmil")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
+text = "X"
+
+[node name="Label3" type="Label" parent="Credits" unique_id=118602057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.5
+offset_top = 225.0
+offset_right = 209.5
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 49
+text = "Made for GMTK 2026"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Credits" unique_id=255969723]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.5
+offset_top = -185.0
+offset_right = 273.5
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 30
+text = "Nick Rosen - Lead Game Design, Tile Art, Programming
+
+Jack Boudreaux - Programming
+
+Bryan Lorenzo - Level Design
+
+Desiree Lopez - Prop Art
+
+Hannah Cherone - Sound designer
+
+Zhiyu Liu - Composer
+
+Vick \"Vigilante\" Scarpato - Character animation, Menu Art, UI"
+autowrap_mode = 3
+
+[node name="StartButtonSound" type="AudioStreamPlayer" parent="." unique_id=561674917]
+stream = ExtResource("5_glbon")
+
+[node name="CreditSound" type="AudioStreamPlayer" parent="." unique_id=2002951207]
+stream = ExtResource("6_nlkkf")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1647758962]
+stream = ExtResource("7_qe12f")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1397446453]
+stream = ExtResource("8_8qtwp")
+
+[connection signal="mouse_entered" from="Main Buttons/Start" to="." method="_on_START_mouse_entered"]
+[connection signal="pressed" from="Main Buttons/Start" to="." method="_on_START_pressed"]
+[connection signal="mouse_entered" from="Main Buttons/Options" to="." method="_on_SETTINGS_mouse_entered"]
+[connection signal="pressed" from="Main Buttons/Options" to="." method="_on_SETTINGS_pressed"]
+[connection signal="mouse_entered" from="Main Buttons/Credits" to="." method="_on_CREDITS_mouse_entered"]
+[connection signal="pressed" from="Main Buttons/Credits" to="." method="_on_CREDITS_pressed"]
+[connection signal="mouse_entered" from="Main Buttons/Exit" to="." method="_on_EXIT_mouse_entered"]
+[connection signal="pressed" from="Main Buttons/Exit" to="." method="_on_EXIT_pressed"]
+[connection signal="pressed" from="Credits/Label/Exit" to="." method="_on_X_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://werrnt2hioxu"]
+
+[ext_resource type="PackedScene" uid="uid://bbcgth18qt0sk" path="res://Player.tscn" id="1_wbxth"]
+[ext_resource type="PackedScene" uid="uid://bxm4jsfhmq5ll" path="res://Civilian.tscn" id="3_m34ki"]
+[ext_resource type="PackedScene" uid="uid://dnbadnijef2au" path="res://Enemy/enemy.tscn" id="8_urrcd"]
+
+[node name="Gameplay" type="Node2D" unique_id=1974249953]
+position = Vector2(-1, 0)
+
+[node name="Player" parent="." unique_id=765150634 instance=ExtResource("1_wbxth")]
+position = Vector2(501, 373)
+
+[node name="Enemy" parent="." unique_id=1389768543 instance=ExtResource("8_urrcd")]
+position = Vector2(805, 317)
+
+[node name="Enemy2" parent="." unique_id=709225945 instance=ExtResource("8_urrcd")]
+position = Vector2(776, 511)
+
+[node name="Civilian" parent="." unique_id=633203971 instance=ExtResource("3_m34ki")]
+position = Vector2(522, 232)
