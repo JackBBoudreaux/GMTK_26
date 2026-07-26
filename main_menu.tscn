@@ -160,9 +160,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -304.0
-offset_top = -273.5
+offset_top = -303.25
 offset_right = 304.0
-offset_bottom = 273.5
+offset_bottom = 303.25
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5h30v")
@@ -175,9 +175,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -209.5
-offset_top = -270.0
+offset_top = -300.0
 offset_right = 209.5
-offset_bottom = -197.0
+offset_bottom = -227.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_06t4h")
@@ -211,9 +211,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -209.5
-offset_top = 197.0
+offset_top = 225.0
 offset_right = 209.5
-offset_bottom = 270.0
+offset_bottom = 298.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_06t4h")
@@ -246,6 +246,8 @@ Bryan Lorenzo - Level Design
 Desiree Lopez - Prop Art
 
 Hannah Cherone - Sound designer
+
+Zhiyu Liu - Composer
 
 Vick \"Vigilante\" Scarpato - Character animation, Menu Art, UI"
 autowrap_mode = 3
