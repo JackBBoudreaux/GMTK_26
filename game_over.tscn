@@ -235,7 +235,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"bomb_death",
-"speed": 18.0
+"speed": 26.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -285,7 +285,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"crowbar_death",
-"speed": 18.0
+"speed": 26.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -335,7 +335,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"homicide_death",
-"speed": 18.0
+"speed": 26.0
 }]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2144031347]
@@ -358,4 +358,4 @@ offset_bottom = 40.0
 position = Vector2(576, 324.00003)
 scale = Vector2(4.056338, 4.0499997)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"bomb_death"
+animation = &"homicide_death"
