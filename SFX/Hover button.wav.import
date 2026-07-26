@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl5nm7gmpmwpt"
+path="res://.godot/imported/Hover button.wav-578ea881f9c2918c3c563c8284d72257.sample"
+
+[deps]
+
+source_file="res://SFX/Hover button.wav"
+dest_files=["res://.godot/imported/Hover button.wav-578ea881f9c2918c3c563c8284d72257.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
