@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://werrnt2hioxu"]
 
 [ext_resource type="PackedScene" uid="uid://bbcgth18qt0sk" path="res://Player.tscn" id="1_wbxth"]
-[ext_resource type="PackedScene" uid="uid://bxm4jsfhmq5ll" path="res://Civilian.tscn" id="3_m34ki"]
+[ext_resource type="PackedScene" uid="uid://dvash0ovf8b8c" path="res://Civilian.tscn" id="3_m34ki"]
 [ext_resource type="PackedScene" uid="uid://dnbadnijef2au" path="res://Enemy/enemy.tscn" id="8_urrcd"]
 
 [node name="Gameplay" type="Node2D" unique_id=1974249953]
