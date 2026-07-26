@@ -4,8 +4,10 @@ signal on_transition_finished
 
 @onready var color_rect = $ColorRect
 @onready var animation_player = $AnimationPlayer
+@onready var controls: Panel = $Controls
 
 func _ready():
+	controls.visible = false
 	color_rect.visible = false
 	animation_player.animation_finished.connect(_on_animation_finished)
 	
@@ -15,10 +17,16 @@ func _on_animation_finished(anim_name):
 		animation_player.play("fade_to_NORMAL")
 	elif anim_name == "fade_to_NORMAL":
 		color_rect.visible = false
-		
+		controls.visible = true
+
 func transition():
 	$StartButtonSound.play()
 	color_rect.visible = true
 	animation_player.play("fade_to_BLACK")
+
+func _on_got_it_pressed() -> void:
+	$ClickSound.play()
+	controls.visible = false
 	
-	
+func _on_got_it_mouse_entered() -> void:
+	$HoverSound.play()

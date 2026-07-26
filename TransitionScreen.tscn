@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dw13ukx7la25d" path="res://Assets/Scripts/transition_screen.gd" id="1_3wpfl"]
 [ext_resource type="AudioStream" uid="uid://c1q0e6ptym6o7" path="res://SFX/Start button.wav" id="2_eigs0"]
+[ext_resource type="FontFile" uid="uid://bnbb1jkhsf7u5" path="res://Main_Menu/pixelplay.ttf" id="3_h8nij"]
+[ext_resource type="Texture2D" uid="uid://d35iwpfqjmn2s" path="res://Main_Menu/WASD.png" id="4_700ic"]
+[ext_resource type="AudioStream" uid="uid://s344igc0mgta" path="res://SFX/Click.wav" id="4_h85x2"]
+[ext_resource type="AudioStream" uid="uid://bl5nm7gmpmwpt" path="res://SFX/Hover button.wav" id="5_4cm2i"]
+[ext_resource type="Texture2D" uid="uid://qnf5aqi7lqkg" path="res://Main_Menu/LeftClick.png" id="5_tum13"]
 
 [sub_resource type="Animation" id="Animation_eigs0"]
 length = 0.001
@@ -55,6 +60,44 @@ _data = {
 &"fade_to_NORMAL": SubResource("Animation_xjkqa")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjkqa"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h85x2"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_detail = 1
+shadow_offset = Vector2(0.715, 0)
+anti_aliasing = false
+anti_aliasing_size = 4.42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cm2i"]
+bg_color = Color(0.7953939, 0.79539394, 0.7953939, 1)
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+shadow_offset = Vector2(0.715, 0)
+anti_aliasing = false
+anti_aliasing_size = 4.42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_700ic"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fy2e8"]
+texture = ExtResource("4_700ic")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwwhx"]
+texture = ExtResource("5_tum13")
+
 [node name="TransitionScreen" type="CanvasLayer" unique_id=1289866952]
 script = ExtResource("1_3wpfl")
 
@@ -72,3 +115,139 @@ libraries/ = SubResource("AnimationLibrary_h85x2")
 
 [node name="StartButtonSound" type="AudioStreamPlayer" parent="." unique_id=961183422]
 stream = ExtResource("2_eigs0")
+
+[node name="Controls" type="Panel" parent="." unique_id=873750762]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -214.625
+offset_right = 249.0
+offset_bottom = 214.625
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xjkqa")
+
+[node name="Label" type="Label" parent="Controls" unique_id=354998737]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.5
+offset_top = -194.0
+offset_right = 209.5
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_h8nij")
+theme_override_font_sizes/font_size = 55
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="Got it" type="Button" parent="Controls" unique_id=1633068174]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = 108.0
+offset_right = 60.5
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h8nij")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_h85x2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_h85x2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4cm2i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_700ic")
+text = "Got It"
+
+[node name="Panel" type="Panel" parent="Controls" unique_id=1775916362]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -73.0
+offset_right = -23.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fy2e8")
+
+[node name="Instructions" type="Label" parent="Controls/Panel" unique_id=1487551195]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = 31.0
+offset_right = 33.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_h8nij")
+theme_override_font_sizes/font_size = 30
+text = "Move"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Panel2" type="Panel" parent="Controls/Panel" unique_id=8593701]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 109.0
+offset_top = -109.0
+offset_right = 255.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wwwhx")
+
+[node name="Instructions2" type="Label" parent="Controls/Panel" unique_id=817421872]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_top = 36.0
+offset_right = 215.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_h8nij")
+theme_override_font_sizes/font_size = 30
+text = "Shoot"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1330559863]
+stream = ExtResource("4_h85x2")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=74694788]
+stream = ExtResource("5_4cm2i")
+
+[connection signal="mouse_entered" from="Controls/Got it" to="." method="_on_got_it_mouse_entered"]
+[connection signal="pressed" from="Controls/Got it" to="." method="_on_got_it_pressed"]

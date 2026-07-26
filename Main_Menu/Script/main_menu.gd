@@ -14,7 +14,6 @@ func _on_START_pressed() -> void:
 	
 	get_tree().change_scene_to_file("res://Main.tscn")
 	
-	
 func _on_SETTINGS_pressed() -> void:
 	$ClickSound.play()
 	print("settings pressed")
