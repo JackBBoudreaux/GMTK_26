@@ -53,4 +53,3 @@ func _on_health_health_depleted() -> void:
 func _on_death_animation_finished() -> void:
 	if animated_sprite_2d.animation == "dying":
 		GameOverManager.trigger_game_over("crowbar_death")
-		print("game over death played")
