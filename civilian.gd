@@ -48,4 +48,4 @@ func _on_health_health_depleted() -> void:
 
 func _on_death_animation_finished() -> void:
 	if animated_sprite_2d.animation == "civilian_death":
-		queue_free()
+		get_tree().reload_current_scene()
