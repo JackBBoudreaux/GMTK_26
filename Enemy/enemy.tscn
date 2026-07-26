@@ -229,7 +229,7 @@ size = Vector2(12.5, 19.428572)
 radius = 11.999999
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm4b"]
-radius = 54.0
+radius = 55.29412
 
 [node name="Enemy" type="Node2D" unique_id=1389768543]
 
@@ -241,12 +241,11 @@ script = ExtResource("1_iifgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=926311367]
 texture_filter = 1
-scale = Vector2(0.69642854, 0.69642854)
+position = Vector2(0.017858095, 0)
+scale = Vector2(0.69742066, 0.69642854)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"enemy_attacking"
+animation = &"enemy_running"
 autoplay = "enemy_running"
-frame = 10
-frame_progress = 0.6437502
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=147644081]
 scale = Vector2(0.9999999, 0.9999999)
@@ -286,6 +285,7 @@ script = ExtResource("7_glvfu")
 metadata/_custom_type_script = "uid://dsbl7ayir7pa"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/HitBox" unique_id=877075033]
+scale = Vector2(0.85, 0.85)
 shape = SubResource("CircleShape2D_0xm4b")
 
 [connection signal="health_depleted" from="Enemy/Health" to="Enemy" method="_on_health_health_depleted"]
