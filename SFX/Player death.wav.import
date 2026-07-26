@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bssc8k2vuubwm"
+path="res://.godot/imported/Player death.wav-ca3163d0b5b37c5b39d845f8ad4ab19f.sample"
+
+[deps]
+
+source_file="res://SFX/Player death.wav"
+dest_files=["res://.godot/imported/Player death.wav-ca3163d0b5b37c5b39d845f8ad4ab19f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

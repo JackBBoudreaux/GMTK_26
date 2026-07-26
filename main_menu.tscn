@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://bqsawhflvyecj" path="res://Main_Menu/Script/main_menu.gd" id="1_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://n5hxehddfhe0" path="res://Main_Menu/JamesBombMenu.png" id="2_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://qo66eonf1x2" path="res://Main_Menu/JamesBombTitle.png" id="3_jix8l"]
+[ext_resource type="AudioStream" uid="uid://c1q0e6ptym6o7" path="res://SFX/Start button.wav" id="5_glbon"]
+[ext_resource type="AudioStream" uid="uid://b72afk3x1h8kr" path="res://SFX/Credit screen .wav" id="6_nlkkf"]
+[ext_resource type="AudioStream" uid="uid://s344igc0mgta" path="res://SFX/Click.wav" id="7_qe12f"]
+[ext_resource type="AudioStream" uid="uid://bl5nm7gmpmwpt" path="res://SFX/Hover button.wav" id="8_8qtwp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
 texture = ExtResource("2_fu7sn")
@@ -246,8 +250,24 @@ Hannah Cherone - Sound designer
 Vick \"Vigilante\" Scarpato - Character animation, Menu Art, UI"
 autowrap_mode = 3
 
+[node name="StartButtonSound" type="AudioStreamPlayer" parent="." unique_id=561674917]
+stream = ExtResource("5_glbon")
+
+[node name="CreditSound" type="AudioStreamPlayer" parent="." unique_id=2002951207]
+stream = ExtResource("6_nlkkf")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1647758962]
+stream = ExtResource("7_qe12f")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1397446453]
+stream = ExtResource("8_8qtwp")
+
+[connection signal="mouse_entered" from="Main Buttons/Start" to="." method="_on_START_mouse_entered"]
 [connection signal="pressed" from="Main Buttons/Start" to="." method="_on_START_pressed"]
+[connection signal="mouse_entered" from="Main Buttons/Options" to="." method="_on_SETTINGS_mouse_entered"]
 [connection signal="pressed" from="Main Buttons/Options" to="." method="_on_SETTINGS_pressed"]
+[connection signal="mouse_entered" from="Main Buttons/Credits" to="." method="_on_CREDITS_mouse_entered"]
 [connection signal="pressed" from="Main Buttons/Credits" to="." method="_on_CREDITS_pressed"]
+[connection signal="mouse_entered" from="Main Buttons/Exit" to="." method="_on_EXIT_mouse_entered"]
 [connection signal="pressed" from="Main Buttons/Exit" to="." method="_on_EXIT_pressed"]
 [connection signal="pressed" from="Credits/Label/Exit" to="." method="_on_X_pressed"]
