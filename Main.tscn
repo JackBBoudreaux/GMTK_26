@@ -896,7 +896,7 @@ position = Vector2(-665, -311)
 position = Vector2(-75, -714)
 
 [node name="Enemy2" parent="." unique_id=1651635531 instance=ExtResource("21_devvj")]
-position = Vector2(-1265, -711)
+position = Vector2(-1258, -715)
 
 [node name="Node2D" parent="." unique_id=633203971 instance=ExtResource("18_2gh4u")]
 position = Vector2(-732, -874)
@@ -906,3 +906,27 @@ position = Vector2(-238, -271)
 
 [node name="Node2D4" parent="." unique_id=1595137768 instance=ExtResource("18_2gh4u")]
 position = Vector2(-796, -615)
+
+[node name="Node2D5" parent="." unique_id=1668637787 instance=ExtResource("18_2gh4u")]
+position = Vector2(-796, -615)
+
+[node name="Enemy3" parent="." unique_id=579511940 instance=ExtResource("21_devvj")]
+position = Vector2(481, -737)
+
+[node name="Enemy4" parent="." unique_id=484951712 instance=ExtResource("21_devvj")]
+position = Vector2(-1646, -1446)
+
+[node name="Enemy5" parent="." unique_id=1208131793 instance=ExtResource("21_devvj")]
+position = Vector2(-138, -1439)
+
+[node name="Enemy6" parent="." unique_id=219191202 instance=ExtResource("21_devvj")]
+position = Vector2(-2032, -422)
+
+[node name="Enemy7" parent="." unique_id=193421461 instance=ExtResource("21_devvj")]
+position = Vector2(735, -229)
+
+[node name="Enemy8" parent="." unique_id=1376805440 instance=ExtResource("21_devvj")]
+position = Vector2(-2081, -887)
+
+[node name="Enemy9" parent="." unique_id=1095424068 instance=ExtResource("21_devvj")]
+position = Vector2(804, -1363)

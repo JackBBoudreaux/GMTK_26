@@ -15,6 +15,7 @@ func _on_animation_finished(anim_name):
 	if anim_name == "fade_to_BLACK":
 		on_transition_finished.emit()
 		animation_player.play("fade_to_NORMAL")
+		$"Battle Theme".play()
 	elif anim_name == "fade_to_NORMAL":
 		color_rect.visible = false
 		controls.visible = true

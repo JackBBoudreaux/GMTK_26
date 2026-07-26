@@ -2,13 +2,14 @@ extends Control
 
 @onready var main_buttons: HBoxContainer = $"Main Buttons"
 @onready var credits: Panel = $Credits
+@onready var noir_menu: AudioStreamPlayer = $Noir_menu
 
 func _ready():
 	main_buttons.visible = true
 	credits.visible = false
-
+	$Noir_menu.play()
 func _on_START_pressed() -> void:
-		
+	$Noir_menu.stop()
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
 	
@@ -22,6 +23,7 @@ func _on_CREDITS_pressed() -> void:
 	print("credits pressed")
 	$ClickSound.play()
 	$CreditSound.play()
+	$Noir_menu.stop()
 	main_buttons.visible = false
 	credits.visible = true
 	
@@ -29,6 +31,7 @@ func _on_X_pressed() -> void:
 	$CreditSound.stop()
 	main_buttons.visible = true
 	credits.visible = false
+	$Noir_menu.play()
 	
 func _on_EXIT_pressed() -> void:
 	$ClickSound.play()
