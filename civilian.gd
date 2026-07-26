@@ -10,7 +10,15 @@ var is_dead: bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var wander_timer: Timer = $WanderTimer
 
+var sprite_variations: Array[SpriteFrames] = [
+	preload("res://civilian_frames_1.tres"),
+	preload("res://civilian_frames_2.tres"),
+	preload("res://civilian_frames_3.tres"),
+]
+
 func _ready() -> void:
+	animated_sprite_2d.sprite_frames = sprite_variations[randi() % sprite_variations.size()]
+	
 	wander_timer.timeout.connect(_on_wander_timer_timeout)
 	_pick_new_direction()
 
@@ -24,8 +32,7 @@ func _physics_process(delta: float) -> void:
 	animated_sprite_2d.flip_h = direction.x < 0
 
 	if direction.length() > 0.1:
-		if animated_sprite_2d.animation != "civilian_running":
-			animated_sprite_2d.play("civilian_running")
+		animated_sprite_2d.play("civilian_running")
 	else:
 		if animated_sprite_2d.animation != "civilian_idle":
 			animated_sprite_2d.play("civilian_idle")

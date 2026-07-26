@@ -1,121 +1,9 @@
 [gd_scene format=3 uid="uid://bxm4jsfhmq5ll"]
 
 [ext_resource type="Script" uid="uid://hm8surx3xqfl" path="res://civilian.gd" id="1_j5g1q"]
-[ext_resource type="Texture2D" uid="uid://xyy5emj6od4g" path="res://Assets/Sprites/Civilian_Running_1.png" id="2_7u3py"]
-[ext_resource type="Texture2D" uid="uid://d3wnpyld3oms3" path="res://Assets/Sprites/Civilian_Death_1.png" id="2_dnevo"]
+[ext_resource type="SpriteFrames" uid="uid://dp2qq3jk53xgb" path="res://civilian_frames_1.tres" id="2_mjykl"]
 [ext_resource type="Script" uid="uid://dysmochkltkpe" path="res://health.gd" id="4_u5joi"]
 [ext_resource type="Script" uid="uid://4spiax2bj7n5" path="res://hurtbox.gd" id="5_f477j"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1xj18"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(0, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oppat"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(43, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ipa31"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(86, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_morou"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(129, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p81hv"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(172, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u6uud"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(215, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8c3e5"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(258, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbg6p"]
-atlas = ExtResource("2_dnevo")
-region = Rect2(301, 0, 43, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dnevo"]
-atlas = ExtResource("2_7u3py")
-region = Rect2(0, 0, 30, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mjykl"]
-atlas = ExtResource("2_7u3py")
-region = Rect2(30, 0, 30, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5joi"]
-atlas = ExtResource("2_7u3py")
-region = Rect2(60, 0, 30, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f477j"]
-atlas = ExtResource("2_7u3py")
-region = Rect2(90, 0, 30, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cku0n"]
-atlas = ExtResource("2_7u3py")
-region = Rect2(120, 0, 30, 29)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wd0bi"]
-atlas = ExtResource("2_7u3py")
-region = Rect2(150, 0, 30, 29)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0xm4b"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1xj18")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oppat")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ipa31")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_morou")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p81hv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u6uud")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8c3e5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pbg6p")
-}],
-"loop": 0,
-"name": &"civilian_death",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dnevo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mjykl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u5joi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f477j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cku0n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wd0bi")
-}],
-"loop": 1,
-"name": &"civilian_running",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm4b"]
 size = Vector2(28.315, 47.97)
@@ -134,8 +22,8 @@ script = ExtResource("1_j5g1q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Civilian" unique_id=1240758352]
 texture_filter = 1
 scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"civilian_death"
+sprite_frames = ExtResource("2_mjykl")
+animation = &"civilian_running"
 autoplay = "civilian_running"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Civilian" unique_id=353614831]
