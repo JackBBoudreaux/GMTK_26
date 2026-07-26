@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://sn11ijo0qwp2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm4b"]
+
+[node name="Control" type="Control" unique_id=930024833]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="." unique_id=1727184895]
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 23.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_0xm4b")
+
+[node name="Timer" type="Timer" parent="." unique_id=614120490]
