@@ -9,7 +9,7 @@ const FRICTION: int = 1000
 
 var is_dead: bool = false
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_dead:
 		return
 		
@@ -52,4 +52,5 @@ func _on_health_health_depleted() -> void:
 #reload scene after death. Put Game Over in this or whatever
 func _on_death_animation_finished() -> void:
 	if animated_sprite_2d.animation == "dying":
-		get_tree().reload_current_scene()
+		GameOverManager.trigger_game_over("crowbar_death")
+		print("game over death played")
