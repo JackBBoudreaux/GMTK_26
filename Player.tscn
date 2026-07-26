@@ -167,7 +167,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdg3f"]
-size = Vector2(15.230501, 28.05611)
+size = Vector2(15.631283, 23.647295)
 
 [node name="Node2D" type="Node2D" unique_id=765150634]
 
@@ -183,7 +183,7 @@ animation = &"dying"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=608618960]
-position = Vector2(-3.206, 0)
+position = Vector2(3.0060225, 0.20039995)
 shape = SubResource("RectangleShape2D_tdg3f")
 
 [node name="Gun" parent="Player" unique_id=1045383191 instance=ExtResource("3_kne1u")]
@@ -205,7 +205,8 @@ health = NodePath("../Health")
 metadata/_custom_type_script = "uid://4spiax2bj7n5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/HurtBox" unique_id=424339325]
-position = Vector2(-3.206413, 0)
+visible = false
+position = Vector2(3.206413, 2.0040073)
 shape = SubResource("RectangleShape2D_tdg3f")
 
 [connection signal="health_depleted" from="Player/Health" to="Player" method="_on_health_health_depleted"]
