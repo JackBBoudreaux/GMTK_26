@@ -43,7 +43,6 @@ func _on_START_mouse_entered() -> void:
 func _on_SETTINGS_mouse_entered() -> void:
 	$HoverSound.play()
 
-
 func _on_CREDITS_mouse_entered() -> void:
 	$HoverSound.play()
 
