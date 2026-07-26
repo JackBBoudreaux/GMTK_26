@@ -91,7 +91,7 @@ region = Rect2(210, 0, 30, 28)
 [sub_resource type="SpriteFrames" id="SpriteFrames_dtqjt"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_efikj")
 }, {
 "duration": 1.0,
@@ -117,7 +117,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"dying",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -184,7 +184,7 @@ animation = &"dying"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=608618960]
-position = Vector2(3.0060225, 1.0020038)
+position = Vector2(1.2024049, 0.40080166)
 shape = SubResource("RectangleShape2D_tdg3f")
 
 [node name="Gun" parent="Player" unique_id=1045383191 instance=ExtResource("3_kne1u")]

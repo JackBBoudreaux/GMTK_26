@@ -128,15 +128,17 @@ position = Vector2(527, 312)
 
 [node name="Civilian" type="CharacterBody2D" parent="." unique_id=1311957122]
 collision_layer = 0
-collision_mask = 5
+collision_mask = 4
 script = ExtResource("1_j5g1q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Civilian" unique_id=1240758352]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"civilian_running"
+animation = &"civilian_death"
 autoplay = "civilian_running"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Civilian" unique_id=353614831]
 shape = SubResource("RectangleShape2D_0xm4b")
