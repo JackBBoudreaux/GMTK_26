@@ -137,8 +137,6 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
 animation = &"civilian_death"
 autoplay = "civilian_running"
-frame = 7
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Civilian" unique_id=353614831]
 shape = SubResource("RectangleShape2D_0xm4b")
