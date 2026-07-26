@@ -144,10 +144,10 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wgogq")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_2j8qn")
 }, {
-"duration": 1.0,
+"duration": 0.7,
 "texture": SubResource("AtlasTexture_agwpm")
 }, {
 "duration": 1.0,
@@ -158,7 +158,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"enemy_attacking",
-"speed": 25.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 0.7,
@@ -229,7 +229,7 @@ size = Vector2(12.5, 19.428572)
 radius = 11.999999
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm4b"]
-radius = 52.03845
+radius = 54.0
 
 [node name="Enemy" type="Node2D" unique_id=1389768543]
 
@@ -243,10 +243,10 @@ script = ExtResource("1_iifgy")
 texture_filter = 1
 scale = Vector2(0.69642854, 0.69642854)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"enemy_death"
+animation = &"enemy_attacking"
 autoplay = "enemy_running"
-frame = 8
-frame_progress = 1.0
+frame = 10
+frame_progress = 0.6437502
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=147644081]
 scale = Vector2(0.9999999, 0.9999999)

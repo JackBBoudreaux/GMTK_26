@@ -1,5 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var gun: Node2D = $Gun
+
 
 const MAX_SPEED: int = 250
 const ACCELERATION: int = 1400
@@ -37,6 +39,7 @@ func _process(delta: float) -> void:
 func _on_health_health_depleted() -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
+	gun.visible = false
 	animated_sprite_2d.play("dying")
 	animated_sprite_2d.animation_finished.connect(_on_death_animation_finished)
 
