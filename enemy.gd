@@ -37,7 +37,6 @@ func _physics_process(delta: float) -> void:
 	animated_sprite_2d.flip_h = global_position.x > player_pos.x
 	if is_attacking:
 		velocity = Vector2.ZERO
-		move_and_slide()
 		return
 	if player_in_range:
 		velocity = Vector2.ZERO
