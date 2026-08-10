@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dc7t81a5bh1sl"]
 
+[ext_resource type="PackedScene" uid="uid://sn11ijo0qwp2" path="res://Countdown.tscn" id="1_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://d0yffd3jri7cb" path="res://Placeholder_Tiles/Placeholder_wall.png" id="4_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://yi4ift5e7rrt" path="res://Tiles/Cobblestone_Tile.png" id="7_trn2v"]
 [ext_resource type="Texture2D" uid="uid://dgmmeh6pyx2pt" path="res://Placeholder_Tiles/PlaceHolderObjects.png" id="8_03owx"]
@@ -867,6 +868,8 @@ sources/11 = SubResource("TileSetAtlasSource_mxvw5")
 
 [node name="Node2D" type="Node2D" unique_id=1221129304]
 position = Vector2(561, 311)
+
+[node name="CanvasLayer" parent="." unique_id=233934798 instance=ExtResource("1_5tuhn")]
 
 [node name="TileMapLayer-Terrain" type="TileMapLayer" parent="." unique_id=815258637]
 position = Vector2(-6, -19)

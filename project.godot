@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameOverManager="*uid://b21cb23si6jht"
 TransitionScreen="*uid://dlevmubi016d8"
+TimerDown="*uid://sn11ijo0qwp2"
 
 [display]
 

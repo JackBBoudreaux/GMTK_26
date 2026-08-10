@@ -16,6 +16,9 @@ var animation_offsets := {
 @onready var attack_area: Area2D = $AttackArea
 @onready var hit_box: HitBox = $HitBox
 @onready var hit_box_shape: CollisionShape2D = $HitBox/CollisionShape2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
+
 
 func _ready() -> void:
 	if player == null:
@@ -94,6 +97,8 @@ func _on_health_health_depleted() -> void:
 	velocity = Vector2.ZERO
 	hit_box_shape.set_deferred("disabled", true)
 	attack_area.set_deferred("monitoring", false)
+	collision_shape_2d.set_deferred("disabled", true)
+	TimerDown.add_time(1.0)
 	animated_sprite_2d.play("enemy_death")
 	animated_sprite_2d.animation_finished.connect(_on_death_animation_finished)
 

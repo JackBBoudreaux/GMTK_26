@@ -190,7 +190,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"enemy_death",
-"speed": 14.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -244,10 +244,8 @@ texture_filter = 1
 position = Vector2(0.017858095, 0)
 scale = Vector2(0.69742066, 0.69642854)
 sprite_frames = SubResource("SpriteFrames_0xm4b")
-animation = &"enemy_attacking"
+animation = &"enemy_running"
 autoplay = "enemy_running"
-frame = 10
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=147644081]
 scale = Vector2(0.9999999, 0.9999999)
