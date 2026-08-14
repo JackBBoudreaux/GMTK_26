@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://sn11ijo0qwp2"]
+
+[ext_resource type="Script" uid="uid://b4s00aebrxa3h" path="res://countdown.gd" id="1_sbicn"]
+[ext_resource type="FontFile" uid="uid://ckfpja4vq44fq" path="res://DS-DIGIT.TTF" id="2_oqbvw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm4b"]
+font = ExtResource("2_oqbvw")
+font_size = 80
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=233934798]
+script = ExtResource("1_sbicn")
+
+[node name="Label" type="Label" parent="." unique_id=1934244008]
+z_index = 7
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.0
+offset_right = 21.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 115
+text = ":20"
+label_settings = SubResource("LabelSettings_0xm4b")
+
+[node name="Timer" type="Timer" parent="." unique_id=835229180]

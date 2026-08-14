@@ -13,7 +13,9 @@ func _on_START_pressed() -> void:
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
 	
+	Countdown.start_countdown()
 	get_tree().change_scene_to_file("res://Main.tscn")
+	
 	
 func _on_SETTINGS_pressed() -> void:
 	$ClickSound.play()

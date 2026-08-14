@@ -52,4 +52,5 @@ func _on_health_health_depleted() -> void:
 #reload scene after death. Put Game Over in this or whatever
 func _on_death_animation_finished() -> void:
 	if animated_sprite_2d.animation == "dying":
+		Countdown.reset()
 		GameOverManager.trigger_game_over("crowbar_death")
